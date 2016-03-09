@@ -9,9 +9,12 @@ namespace K_Means
 {
     class FileReader
     {
+        #region variables
         private int lineCount;
         private List<double[]> data;
+        #endregion
 
+        #region functions
         /// <summary>
         /// Returns the data
         /// </summary>
@@ -71,15 +74,41 @@ namespace K_Means
             {
                 try
                 {
-                    newData[i] = Convert.ToDouble(data[i]);
+                    newData[i] = double.Parse(data[i], System.Globalization.CultureInfo.InvariantCulture);
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine(e.Message);
+                    Console.WriteLine("can't convert to double\n"+e.Message);
                 }
             }
 
             return newData;
         }
+        #endregion
+
+        #region Test
+        public void convertToDoubleTest()
+        {
+            string[] mockData = { "-1", "-0.5", "0.5", "9", "7.6", "-5" };
+            double[] data = convertToDouble(mockData);
+            foreach(double d in data)
+            {
+                Console.WriteLine(d);
+            }
+        }
+
+        public void getDataTest()
+        {
+            getDataSet("dataTest.txt", ',');
+            foreach(double[] dd in data)
+            {
+                foreach(double d in dd)
+                {
+                    Console.Write(d + ";");
+                }
+                Console.WriteLine();
+            }
+        }
+        #endregion
     }
 }

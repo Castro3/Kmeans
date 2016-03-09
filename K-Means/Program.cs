@@ -8,13 +8,13 @@ namespace K_Means
 {
     class Program
     {
-        #region variables
-        private List<String[]> maliste;
-        #endregion
 
         static void Main(string[] args)
         {
-            
+            FileReader fileReader = new FileReader();
+            Kmeans kmeans = new Kmeans();
+            kmeans.checkSimilarityTest();
+            Console.ReadKey();
         }
 
         
