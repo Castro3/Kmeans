@@ -24,9 +24,13 @@ namespace K_Means
         {
             int similarityCounter = 0;
             Cluster other = (Cluster)obj;
+            if (clusterData.Count != other.clusterData.Count)
+            {
+                return false;
+            }
             for (int i = 0; i < clusterData.Count; i++)
             {
-                for (int j = 0; j<other.getCluster().Count;j++)
+                for (int j = 0; j < other.getCluster().Count; j++)
                 {
                     if (Enumerable.SequenceEqual(clusterData[i], other.getCluster()[j]))
                     {
@@ -34,9 +38,10 @@ namespace K_Means
                     }
                 }
             }
-
-            return similarityCounter==clusterData.Count;
+            return similarityCounter == clusterData.Count;
         }
+
+
 
 
     }

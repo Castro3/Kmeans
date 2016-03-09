@@ -13,9 +13,10 @@ namespace K_Means
         //        return ( "Hello", "World");
         //    }
 
-        public double[] Barycentre(List<double[]> liste)
+        public double[] Barycentre(Cluster cluster)
         {
             double[] bary;
+            List<double[]> liste = cluster.getCluster();
             bary = new double[liste[0].Length];
 
             for (int i = 0; i < liste.Count; i++)
@@ -115,7 +116,7 @@ namespace K_Means
             listee.Add(array3);
             listee.Add(array4);
             listee.Add(array5);
-
+            Cluster cluster = new Cluster(listee);
             //foreach(double[] listeDouble in listee)
             //{
             //    foreach(double nombre in listeDouble)
@@ -126,7 +127,7 @@ namespace K_Means
             //}
 
             double[] barycentre;
-            barycentre = Barycentre(listee);
+            barycentre = Barycentre(cluster);
 
             Console.Write("Le barycentre test est : ");
 
