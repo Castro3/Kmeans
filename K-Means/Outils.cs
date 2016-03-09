@@ -126,9 +126,7 @@ namespace K_Means
             //}
 
             double[] barycentre;
-            Program a;
-            a = new Program();
-            barycentre = a.Barycentre(listee);
+            barycentre = Barycentre(listee);
 
             Console.Write("Le barycentre test est : ");
 
@@ -140,9 +138,7 @@ namespace K_Means
             Console.WriteLine('\n');
 
             double distance;
-            Program b;
-            b = new Program();
-            distance = b.Distance(array3, barycentre);
+            distance = Distance(array3, barycentre);
 
             Console.WriteLine("La distance entre le premier point test et le barycentre test est : " + distance);
 
