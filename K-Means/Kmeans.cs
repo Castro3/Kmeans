@@ -8,6 +8,6 @@ namespace K_Means
 {
     class Kmeans
     {
-
+        
     }
 }
