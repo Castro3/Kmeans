@@ -11,10 +11,14 @@ namespace K_Means
 
         static void Main(string[] args)
         {
-            FileReader fileReader = new FileReader();
-            Kmeans kmeans = new Kmeans();
-            kmeans.checkSimilarityTest();
-            Console.ReadKey();
+            //FileReader fileReader = new FileReader();
+            //Kmeans kmeans = new Kmeans();
+            //kmeans.checkSimilarityTest();
+
+            Outils outils = new Outils();
+            outils.test();
+
+            //Console.ReadKey();
         }
 
         

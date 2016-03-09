@@ -53,9 +53,22 @@ namespace K_Means
             return distance;
         }
 
-        public double Variance(List<double[]> liste)
+        public double Variance(List<Cluster> liste)
         {
-            return 0;
+            double variance = 0;
+            List<double[]> truc;
+
+            foreach(Cluster cluster in liste)
+            {
+                truc = cluster.getCluster();
+
+                foreach(double[] point in truc)
+                {
+                    variance += Distance(point, Barycentre(cluster));
+                }
+            }
+
+            return variance;
         }
 
         public void test()
@@ -142,6 +155,22 @@ namespace K_Means
             distance = Distance(array3, barycentre);
 
             Console.WriteLine("La distance entre le premier point test et le barycentre test est : " + distance);
+
+            Console.WriteLine('\n');
+
+            List<Cluster> liste = new List<Cluster>();
+            List<double[]> liste1 = new List<double[]>();
+            List<double[]> liste2 = new List<double[]>();
+            liste1.Add(array3);
+            liste1.Add(array4);
+            liste2.Add(array5);
+            Cluster cluster1 = new Cluster(liste1);
+            Cluster cluster2 = new Cluster(liste2);
+            liste.Add(cluster1);
+            liste.Add(cluster2);
+
+            double variance = Variance(liste);
+            Console.WriteLine("La variance test est : " + variance);
 
             Console.ReadKey();
         }
