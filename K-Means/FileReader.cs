@@ -33,33 +33,41 @@ namespace K_Means
         /// <param name="delimiter">the character that delimits each file</param>
         public void getDataSet(string filename, char delimiter)
         {
-            data = new List<double[]>();
-            lineCount = 0;
-            using (var reader = File.OpenText(filename))
+            try
             {
-                while (reader.ReadLine() != null)
+                data = new List<double[]>();
+                lineCount = 0;
+                using (var reader = File.OpenText(filename))
                 {
-                    lineCount++;
+                    while (reader.ReadLine() != null)
+                    {
+                        lineCount++;
+                    }
                 }
-            }
 
-            string[] AllLines = new string[lineCount];
-            using (StreamReader sr = File.OpenText(filename))
-            {
-                int x = 0;
-                while (!sr.EndOfStream)
+                string[] AllLines = new string[lineCount];
+                using (StreamReader sr = File.OpenText(filename))
                 {
-                    AllLines[x] = sr.ReadLine();
-                    x += 1;
+                    int x = 0;
+                    while (!sr.EndOfStream)
+                    {
+                        AllLines[x] = sr.ReadLine();
+                        x += 1;
+                    }
                 }
+                Parallel.For(0, AllLines.Length, x =>
+                {
+
+                    data.Add(convertToDouble(AllLines[x].Split(delimiter)));
+
+
+                });
             }
-            Parallel.For(0, AllLines.Length, x =>
+            catch(Exception e)
             {
-
-                data.Add(convertToDouble(AllLines[x].Split(delimiter)));
-
-
-            });
+                Console.WriteLine(e.Message);
+            }
+            
         }
 
         /// <summary>

@@ -8,10 +8,6 @@ namespace K_Means
 {
     class Outils
     {
-        //public String[] Barycentre(List<String[]> liste)
-        //    {
-        //        return ( "Hello", "World");
-        //    }
 
         public double[] Barycentre(Cluster cluster)
         {
