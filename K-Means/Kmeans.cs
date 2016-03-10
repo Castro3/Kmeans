@@ -72,6 +72,8 @@ namespace K_Means
 
             return result;
         }
+
+
         #endregion
 
         #region Test
@@ -134,6 +136,7 @@ namespace K_Means
             Console.WriteLine(counter);
 
         }
+
         #endregion
     }
 }

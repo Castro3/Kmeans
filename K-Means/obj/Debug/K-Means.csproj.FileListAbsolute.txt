@@ -9,3 +9,13 @@ C:\Users\Mcas\Desktop\Workspace\C#\Kmeans\K-Means\obj\Debug\K-Means.exe
 C:\Users\Mcas\Desktop\Workspace\C#\Kmeans\K-Means\obj\Debug\K-Means.pdb
 C:\Users\Mcas\Desktop\Workspace\C#\Kmeans\K-Means\bin\Debug\K-Means.exe
 C:\Users\Mcas\Desktop\Workspace\C#\Kmeans\K-Means\bin\Debug\K-Means.pdb
+<<<<<<< HEAD
+=======
+C:\Users\Mcas\Desktop\Workspace\C#\Kmeans\K-Means\obj\Debug\K-Means.csprojResolveAssemblyReference.cache
+C:\Users\ALEX\Desktop\ESILV_A4\Machine Learning and clustering\Kmeans\K-Means\bin\Debug\K-Means.exe.config
+C:\Users\ALEX\Desktop\ESILV_A4\Machine Learning and clustering\Kmeans\K-Means\obj\Debug\K-Means.exe
+C:\Users\ALEX\Desktop\ESILV_A4\Machine Learning and clustering\Kmeans\K-Means\obj\Debug\K-Means.pdb
+C:\Users\ALEX\Desktop\ESILV_A4\Machine Learning and clustering\Kmeans\K-Means\bin\Debug\K-Means.exe
+C:\Users\ALEX\Desktop\ESILV_A4\Machine Learning and clustering\Kmeans\K-Means\bin\Debug\K-Means.pdb
+C:\Users\ALEX\Desktop\ESILV_A4\Machine Learning and clustering\Kmeans\K-Means\obj\Debug\K-Means.csprojResolveAssemblyReference.cache
+>>>>>>> bb8f5872c0dee0538fe4696efab4ad1ca11c20d1
