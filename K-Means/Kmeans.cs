@@ -108,7 +108,7 @@ namespace K_Means
             List<List<Cluster>> clusterPrec = new List<List<Cluster>>();
             clusterPrec.Add(clusterList);
             int counter = 0;
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 60; i++)
             {
                 bool same = true;
                 while (same)

@@ -9,4 +9,3 @@ C:\Users\Mcas\Desktop\Workspace\C#\Kmeans\K-Means\obj\Debug\K-Means.exe
 C:\Users\Mcas\Desktop\Workspace\C#\Kmeans\K-Means\obj\Debug\K-Means.pdb
 C:\Users\Mcas\Desktop\Workspace\C#\Kmeans\K-Means\bin\Debug\K-Means.exe
 C:\Users\Mcas\Desktop\Workspace\C#\Kmeans\K-Means\bin\Debug\K-Means.pdb
-C:\Users\Mcas\Desktop\Workspace\C#\Kmeans\K-Means\obj\Debug\K-Means.csprojResolveAssemblyReference.cache
