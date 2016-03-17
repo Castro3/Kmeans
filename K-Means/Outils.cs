@@ -6,9 +6,19 @@ using System.Threading.Tasks;
 
 namespace K_Means
 {
+    /// <summary>
+    /// This class contains the tools functions, that is to say what we'll use to perform some steps of K-Means algorithm.
+    /// </summary>
     class Outils
     {
+        #region functions
 
+        /// <summary>
+        /// This functions computes the barycentre of a cluster.
+        /// </summary>
+        /// <param name="cluster">This is the cluster which we're going to compute the barycentre.</param>
+        /// <returns>The function returns an array of double, each double value is a coordinate of the barycentre
+        /// (the number of coordinates depends on the dimension of the cluster), the final array is the barycentre.</returns>
         public double[] Barycentre(Cluster cluster)
         {
             double[] bary;
@@ -37,6 +47,12 @@ namespace K_Means
             return bary;
         }
 
+        /// <summary>
+        /// This functions computes the distance between a point in a cluster and the associated barycentre.
+        /// </summary>
+        /// <param name="point">This array of double is a point (each double is a coordinate and the array is the point).</param>
+        /// <param name="barycentre">This array of double is a barycentre (each double is a coordinate and the array is the barycentre).</param>
+        /// <returns>The function returns a double, that is the distance between the point and the barycentre passed in parameters.</returns>
         public double Distance(double[] point, double[] barycentre)
         {
             double distance = 0;
@@ -49,6 +65,15 @@ namespace K_Means
             return distance;
         }
 
+        /// <summary>
+        /// This functions computes the variance of our repartition of clusters.
+        /// We first calculate the dispersion intra-class of each cluster.
+        /// We then do the sum of all these dispersions intra-class in order to get the final dispersion intra-class.
+        /// This final DIC is the variance.
+        /// </summary>
+        /// <param name="liste">This is a list of clusters that describes the repartition generated in the first step of the algorithm.
+        /// Indeed, each cluster in this list is a cluster containing its own points.</param>
+        /// <returns>The function returns a double, that is the variance.</returns>
         public double Variance(List<Cluster> liste)
         {
             double variance = 0;
@@ -66,7 +91,9 @@ namespace K_Means
 
             return variance;
         }
+        #endregion
 
+        #region test
         public void test()
         {
             //List<Double[]> maliste = new List<double[]>
@@ -170,5 +197,6 @@ namespace K_Means
 
             Console.ReadKey();
         }
+        #endregion
     }
 }
